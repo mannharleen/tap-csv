@@ -14,10 +14,11 @@ setup(name='tap-csv',
           'backoff==1.3.2',
           'requests==2.12.4',
       ],
-      entry_points='''
-          [console_scripts]
-          tap-csv=tap_csv:main
-      ''',
+      entry_points={
+            'console_scripts': [
+            'tap-csv=tap_csv:main',
+        ]
+      }      ,
       packages=['tap_csv'],
       package_data = {
           'tap_csv/schemas': [
